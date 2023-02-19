@@ -1,0 +1,58 @@
+#include <platform.h>
+
+int main(void)
+{
+s.avto_load(1);	    // setup
+
+MOTOR1_FORCE=200;
+MOTOR2_FORCE=200;	  
+    while(true)
+    {
+ 
+		while(INFO_IN1 > 30 )
+		{
+		
+			
+			
+////////////////////////////////////////////////////////////////////	  
+  if (INFO_SW == 0x04)//ESLI KNOPKA 4 NAZATA TO
+	  {
+MOTOR1_SPEED = 20;//VPERED
+//MOTOR2_SPEED = 20;
+	  }
+       else
+	    {
+MOTOR1_SPEED = 0;
+		
+	    }			
+////////	   
+ if (INFO_SW == 0x05)//ESLI KNOPKA 5 NAZATA TO
+	  {
+MOTOR1_SPEED = -20;//
+//MOTOR2_SPEED = -20;
+	  }
+	  
+	 
+////////////////////////////////////////////////////////////
+ if (INFO_SW == 0x06)//ESLI KNOPKA 4 NAZATA TO
+	  {
+MOTOR1_SPEED = 40;//VPERED
+//MOTOR2_SPEED = 40;
+
+	  }
+	   
+ if (INFO_SW == 0x07)//ESLI KNOPKA 5 NAZATA TO
+	  {
+MOTOR1_SPEED = -40;//
+//MOTOR2_SPEED = -40;
+
+	  }
+	  
+   	DELAY_ms(10);   
+////////////////////////////////////////		
+  
+  }
+	
+/////////////////////////////////////////////////////////////////////////////////	   
+    }//while
+}///int main
